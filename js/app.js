@@ -40,9 +40,19 @@ createApp ({
         }  
     },
     methods: {
+       
+        addTodo () {
+            if (this.newTodo.length > 0) {
+                this.todos.push(this.newTodo);
+                // this.newTodo = ' ';
+                console.log(newTodo);
+            } else{
+                console.log ("inserisci un valore valido")
+            }
+        }
 
     },
     mounted () {
-        console.log("ok");
+        console.log(" Vue ok");
     }
 }).mount('#app');
