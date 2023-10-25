@@ -29,7 +29,11 @@
             <main class="main-content">
                 <div class="container">
                     <div class="task-card card">
-                        <div class="card__header">Vue</div>
+                        <div class="card__header">
+                            <input type="text" placeholder="New" @keyup.enter="addtask()">
+                            <button>Add new Task</button>
+                        </div>
+
     
                         <div class="card__body">
                             <ul class="grouped-task">
@@ -37,15 +41,10 @@
                                     <strong class="group__title"> &dtrif; New Task </strong>
     
                                     <ul class="task-list">
-                                        <li class="task">
-                                            <span class="circle task__status done"> &check; </span>
-                                            <span class="task__title">Lorem, ipsum dolor.</span>
-                                            <span class="task__tag bg-blue"> Editorial </span>
-                                        </li>
-                                        <li class="task">
-                                            <span class="circle task__status"> &cross; </span>
-                                            <span class="task__title">Lorem, ipsum dolor.</span>
-                                            <span class="task__tag bg-blue"> Editorial </span>
+                                        <li class="task" v-for="(object, index)in todos" :Keys="index">
+                                            {{ todos[2].text }}
+                                            
+                                            <span>  X</span>
                                         </li>
                                     </ul>
                                 </li>
@@ -54,9 +53,7 @@
     
                                     <ul class="task-list">
                                         <li class="task">
-                                            <span class="circle task__status done"> &check; </span>
-                                            <span class="task__title">Lorem, ipsum dolor.</span>
-                                            <span class="task__tag bg-orange"> Mobile </span>
+                                            <span class="task__title">Boolean</span>
                                         </li>
                                     </ul>
                                 </li>
