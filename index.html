@@ -41,10 +41,9 @@
                                     <strong class="group__title"> &dtrif; New Task </strong>
     
                                     <ul class="task-list">
-                                        <li class="task" v-for="(object, index)in todos" :Keys="index">
-                                            {{ todos[2].text }}
-                                            
-                                            <span>  X</span>
+                                         <li class="task" v-for="(object) in todos" :Keys="index">
+                                            {{ object.text }}
+                                            <span> X</span>
                                         </li>
                                     </ul>
                                 </li>
