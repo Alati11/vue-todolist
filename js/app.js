@@ -54,7 +54,7 @@ createApp ({
            this.newTextTodo = ''
         },
 
-        deleteTask (index){
+        deleteTodo (index){
             console.log(index);
             this.todos.splice(index,1);
 

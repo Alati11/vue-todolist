@@ -41,7 +41,7 @@
                                 <ul class="task-list">
                                     <li class="task" v-for="(todo, index) in todos" :Keys="index">
                                         {{ todo.text }}
-                                        <span @click="deleteTask(index)">X<span>
+                                        <span @click="deleteTodo(index)">X<span>
                                     </li>
                                 </ul>
                             </li>
