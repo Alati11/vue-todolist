@@ -42,13 +42,22 @@ createApp ({
     methods: {
        
         addTodo () {
-            if (this.newTodo.length > 0) {
-                this.todos.push(this.newTodo);
-                // this.newTodo = ' ';
-                console.log(newTodo);
-            } else{
-                console.log ("inserisci un valore valido")
+       
+            const text = this.newTextTodo.trim()
+            if(text !== '') {
+                const newTodo = {
+                    text: text, 
+                    done: false,
+                }
+                this.todos.push(newTodo);
             }
+           this.newTextTodo = ''
+        },
+
+        deleteTask (index){
+            console.log(index);
+            this.todos.splice(index,1);
+
         }
 
     },

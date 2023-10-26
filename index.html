@@ -29,19 +29,19 @@
             <div class="container">
                 <div class="task-card card">
                     <div class="card__header">
-                        <input type="text" placeholder="New" @keyup.enter="addTodo()">
+                        <input v-model= "newTextTodo" type="text" placeholder="New" @keyup.enter="addTodo()">
                         <button @click="addTodo()">Add new Task</button>
                     </div>
 
                     <div class="card__body">
                         <ul class="grouped-task">
                             <li class="group">
-                                <strong class="group__title"> &dtrif; New Task </strong>
+                                <strong class="group__title"> &dtrif;Task </strong>
 
                                 <ul class="task-list">
-                                    <li class="task" v-for="(todo) in todos" :Keys="index">
+                                    <li class="task" v-for="(todo, index) in todos" :Keys="index">
                                         {{ todo.text }}
-                                        <span @click="todos.pop()">X<span>
+                                        <span @click="deleteTask(index)">X<span>
                                     </li>
                                 </ul>
                             </li>

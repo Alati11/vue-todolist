@@ -69,6 +69,11 @@ CARD
 	padding-bottom: 32px;
 }
 
+.done {
+	text-decoration: line-through;
+
+}
+
 /* 
 TASK LIST
 */
